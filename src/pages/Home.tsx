@@ -60,11 +60,11 @@ const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-lg font-medium"
           >
-            <a href="tel:XXX-XXX-XXXX" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Phone size={20} /> XXX-XXX-XXXX
+            <a href="tel:8287125407" className="flex items-center gap-2 hover:text-gold transition-colors">
+              <Phone size={20} /> 828-712-5407
             </a>
-            <a href="mailto:info@alexshomeimprovement.com" className="flex items-center gap-2 hover:text-gold transition-colors">
-              <Mail size={20} /> info@alexshomeimprovement.com
+            <a href="mailto:alexbabak7711@yahoo.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+              <Mail size={20} /> alexbabak7711@yahoo.com
             </a>
           </motion.div>
         </div>

@@ -128,8 +128,8 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-navy mb-2">Call Now</h3>
                   <p className="text-gray-600 mb-4">The fastest way to get a quote is to give us a call directly.</p>
-                  <a href="tel:XXX-XXX-XXXX" className="text-navy font-bold text-xl hover:text-gold transition-colors flex items-center gap-2">
-                    XXX-XXX-XXXX <ArrowRight size={20} />
+                  <a href="tel:8287125407" className="text-navy font-bold text-xl hover:text-gold transition-colors flex items-center gap-2">
+                    828-712-5407 <ArrowRight size={20} />
                   </a>
                 </div>
               </div>
@@ -140,8 +140,8 @@ const Contact: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-navy mb-2">Email Us</h3>
                   <p className="text-gray-600 mb-4">Prefer email? Send us your project details and photos.</p>
-                  <a href="mailto:info@alexshomeimprovement.com" className="text-navy font-bold text-xl hover:text-gold transition-colors flex items-center gap-2">
-                    info@alexshomeimprovement.com <ArrowRight size={20} />
+                  <a href="mailto:alexbabak7711@yahoo.com" className="text-navy font-bold text-xl hover:text-gold transition-colors flex items-center gap-2">
+                    alexbabak7711@yahoo.com <ArrowRight size={20} />
                   </a>
                 </div>
               </div>
