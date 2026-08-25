@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/media/medium-transparent.png" alt="Alex's Home Improvement Logo" className="h-12 w-auto" />
+            <img src="/media/medium-transparent.png" alt="Alex's Home Improvements Logo" className="h-12 w-auto" />
           </Link>
           
           {/* Desktop Menu */}

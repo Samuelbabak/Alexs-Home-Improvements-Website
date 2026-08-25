@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Column 1: About/Logo */}
           <div className="flex flex-col space-y-4">
-            <img src="/media/medium-transparent.png" alt="Alex's Home Improvement Logo" className="h-12 w-auto object-contain" />
+            <img src="/media/medium-transparent.png" alt="Alex's Home Improvements Logo" className="h-12 w-auto object-contain" />
             <p className="text-gray-300 max-w-xs">
               Providing quality craftsmanship and reliable home improvement services to Asheville and Leicester, NC.
             </p>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-navy-700 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Alex's Home Improvement. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Alex's Home Improvements. All rights reserved.</p>
         </div>
       </div>
     </footer>

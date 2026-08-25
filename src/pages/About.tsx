@@ -37,7 +37,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">Meet Alex</h2>
             <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
               <p>
-                I started Alex's Home Improvement with a simple goal: to provide my neighbors in Asheville and Leicester with a contractor they can actually trust.
+                I started Alex's Home Improvements with a simple goal: to provide my neighbors in Asheville and Leicester with a contractor they can actually trust.
               </p>
               <p>
                 With over a decade of experience in general construction, I've handled everything from basic repairs to full-scale home remodels. I believe that a home is the biggest investment most people make, and it deserves to be treated with respect and quality craftsmanship.
