@@ -1,0 +1,8 @@
+[
+  { "id": "porch", "folder": "porch", "title": "Porch Project", "location": "Asheville, NC", "category": "Construction", "description": "A porch project documented from existing damage through the completed work." },
+  { "id": "remodel-attic", "folder": "remodel_attic", "title": "Attic Remodel", "location": "Asheville, NC", "category": "Remodels", "description": "An attic transformed into a finished, useful living space." },
+  { "id": "remodel-bathroom", "folder": "remodel_bathroom", "title": "Bathroom Remodel", "location": "Leicester, NC", "category": "Remodels", "description": "A complete bathroom update with a refreshed finish and improved function." },
+  { "id": "remodel-bathroom2", "folder": "remodel_bathroom2", "title": "Bathroom Upgrade", "location": "Leicester, NC", "category": "Remodels", "description": "A bathroom renovation captured through the finished result." },
+  { "id": "remodel-kitchen", "folder": "remodel_kitchen", "title": "Kitchen Remodel", "location": "Asheville, NC", "category": "Remodels", "description": "A kitchen remodel showing the damage, progress, and completed transformation." },
+  { "id": "remodel-kitchen2", "folder": "remodel_kitchen2", "title": "Kitchen Upgrade", "location": "Asheville, NC", "category": "Remodels", "description": "A kitchen upgrade documented from before to after." }
+]

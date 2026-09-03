@@ -1,0 +1,60 @@
+include: 
+  - ../../common/networking.yaml
+
+name: alexs-home-improvements
+services:
+  frontend:
+    restart: unless-stopped
+    networks:
+       - mediastack
+    working_dir: /app
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=mediastack
+    # ROUTERS
+      - traefik.http.routers.alexs-frontend.service=alexs-home-improvements-frontend
+      - traefik.http.routers.alexs-frontend.rule=Host(`alexshomeimprovements.com`)
+      # - traefik.http.routers.alexs-frontend.rule=Host(`ahi.samuelbabak.com`)
+      - traefik.http.routers.alexs-frontend.entrypoints=secureweb
+      - traefik.http.routers.alexs-frontend.tls=true
+      - traefik.http.routers.alexs-frontend.tls.certResolver=letsencrypt
+
+    # SERVICES
+      - traefik.http.services.alexs-home-improvements-frontend.loadbalancer.server.scheme=http
+      - traefik.http.services.alexs-home-improvements-frontend.loadbalancer.server.port=5173
+  backend:
+    restart: unless-stopped
+    networks:
+       - mediastack
+    working_dir: /app
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - ./backend/customer_attachments:/app/customer_attachments
+      - ./backend/logs:/app/logs
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=mediastack
+    # ROUTERS
+      - traefik.http.routers.alexs-backend.service=alexs-home-improvements-backend
+      # - traefik.http.routers.alexs-backend.rule=Host(`ahi.samuelbabak.com`) && PathPrefix(`/api`)
+      - traefik.http.routers.alexs-backend.rule=Host(`alexshomeimprovements.com`) && PathPrefix(`/api`)
+      - traefik.http.routers.alexs-backend.entrypoints=secureweb
+      - traefik.http.routers.alexs-backend.priority=100
+      - traefik.http.routers.alexs-backend.middlewares=alexs-api-strip
+      - traefik.http.middlewares.alexs-api-strip.stripprefix.prefixes=/api
+      - traefik.http.routers.alexs-backend.tls=true
+      - traefik.http.routers.alexs-backend.tls.certResolver=letsencrypt
+    # SERVICES
+      - traefik.http.services.alexs-home-improvements-backend.loadbalancer.server.scheme=http
+      - traefik.http.services.alexs-home-improvements-backend.loadbalancer.server.port=8000
